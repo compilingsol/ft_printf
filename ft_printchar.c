@@ -6,13 +6,13 @@
 /*   By: maria-sg <maria-sg@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 16:54:49 by maria-sg          #+#    #+#             */
-/*   Updated: 2023/10/04 16:55:22 by maria-sg         ###   ########.fr       */
+/*   Updated: 2023/10/06 15:33:08 by maria-sg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-int	printchar(char c)
+int	ft_printchar(char c)
 {
-	write(1, &c, 1);
+	return (write(1, &c, 1));
 }

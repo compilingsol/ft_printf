@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printstr.c                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maria-sg <maria-sg@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 16:55:33 by maria-sg          #+#    #+#             */
-/*   Updated: 2023/10/06 16:20:42 by maria-sg         ###   ########.fr       */
+/*   Created: 2023/10/06 15:03:13 by maria-sg          #+#    #+#             */
+/*   Updated: 2023/10/06 17:57:01 by maria-sg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int	ft_printstr(char *str)
-{
-	int	i;
+# include <stdint.h>
+# include <unistd.h>
+# include <stdarg.h>
 
-	i = 0;
-	if (!str)
-		return (write(1, "(null)", 6));
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-	return (i);
-}
+int	ft_printchar(char c);
+int	ft_printdigit(long n, int base, int uppercase);
+int	ft_printf(const char *str, ...);
+int	ft_printpointer(unsigned long long ptr);
+//int	print_pointer(unsigned long long ptr);
+int	ft_printstr(char *str);
+
+#endif

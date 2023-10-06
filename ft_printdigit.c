@@ -6,14 +6,13 @@
 /*   By: maria-sg <maria-sg@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:30:21 by maria-sg          #+#    #+#             */
-/*   Updated: 2023/10/04 18:16:53 by maria-sg         ###   ########.fr       */
+/*   Updated: 2023/10/06 17:56:57 by maria-sg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "printf.h"
-#include <unistd.h>
+#include "ft_printf.h"
 
-int	ft_ printdigit(long n, int base, int uppercase)
+int	ft_printdigit(long n, int base, int uppercase)
 {
 	int			value;
 	const char	*symbols;
@@ -67,12 +66,16 @@ int	ft_ printdigit(long n, int base, int uppercase)
 // 		value += printdigit(-n, base, uppercase);
 // 	}
 // 	else if (n < base)
-		//writes the corresponding symbol and increments value by the number of characters written
+		//writes the corresponding symbol and increments value
+		//by the number of characters written
 // 		return (value += write(1, &symbols[n], 1));
 // 	else
 // 	{
-		//calls itself recursively with n / base (the quotient of n divided by base)
-		//then with n % base (the remainder of n divided by base). This is how it handles numbers with more than one digit in the specified base.
+		//calls itself recursively with n / base
+		//(the quotient of n divided by base)
+		//then with n % base (the remainder of n divided by base).
+		//This is how it handles numbers with more than
+		//one digit in the specified base.
 // 		value += printdigit(n / base, base, uppercase);
 // 		value += printdigit(n % base, base, uppercase);
 // 	}
